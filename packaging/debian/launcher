@@ -1,0 +1,46 @@
+#!/bin/sh
+set -eu
+
+VENV="/opt/tardisha/grim-env"
+STATE_DIR="${HOME}/.grimchain"
+SHARE_DIR="/usr/share/tardisha"
+DOC_DIR="/usr/share/doc/tardisha"
+DOC_MARKER="$STATE_DIR/.documents-provided-v23"
+
+if [ ! -x "$VENV/bin/python" ]; then
+    printf '%s\n' 'TardiSHA grim-env is missing or incomplete. Reinstall the tardisha package.' >&2
+    exit 1
+fi
+
+if [ ! -d "$STATE_DIR" ]; then
+    install -d -m 700 "$STATE_DIR"
+fi
+if [ ! -e "$STATE_DIR/config.toml" ]; then
+    install -m 600 "$SHARE_DIR/default-config.toml" "$STATE_DIR/config.toml"
+fi
+
+# Give each user the two optional documents once. They are not runtime files.
+# If the user later removes either document, Grimchain does not recreate it.
+if [ ! -e "$DOC_MARKER" ]; then
+    if [ ! -e "$STATE_DIR/COMMANDS.md" ]; then
+        install -m 600 "$DOC_DIR/COMMANDS.md" "$STATE_DIR/COMMANDS.md"
+    fi
+    if [ ! -e "$STATE_DIR/README.md" ]; then
+        install -m 600 "$DOC_DIR/README.md" "$STATE_DIR/README.md"
+    fi
+    : > "$DOC_MARKER"
+    chmod 600 "$DOC_MARKER"
+fi
+
+case "$(basename "$0")" in
+    grimchain)
+        exec "$VENV/bin/python" -m TardiSHA.grimchain "$@"
+        ;;
+    tardisha|TardiSHA)
+        exec "$VENV/bin/python" -m TardiSHA.cli "$@"
+        ;;
+    *)
+        printf '%s\n' 'Unknown TardiSHA launcher name.' >&2
+        exit 64
+        ;;
+esac

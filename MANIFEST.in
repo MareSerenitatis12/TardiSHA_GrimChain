@@ -1,0 +1,19 @@
+include .gitignore
+include LICENSE README.md COMMANDS.md VERSION SOURCE_GRIMCHAIN_MANIFEST.json
+include CHANGELOG.md CITATION.cff CONTRIBUTING.md COPYRIGHT DICTIONARY.md
+include ORIGIN.md QUICKSTART.md RELEASE_CONTENTS.md SECURITY.md TRADEMARKS.md
+include TardiSHA_selftest.py grimchain tardisha install.sh setup.py
+include The*Breath.pdf
+recursive-include TardiSHA *.c
+recursive-include docs *
+recursive-include examples *
+recursive-include packaging *
+recursive-include validation *.py
+prune validation/results
+prune build
+prune TardiSHA.egg-info
+prune dist
+prune launchpad
+
+global-exclude *.py[cod]
+global-exclude __pycache__

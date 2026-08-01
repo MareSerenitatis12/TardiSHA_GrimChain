@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+"""Run the one local TardiSHA Grimchain program without installing a copy."""
+from __future__ import annotations
+
+from TardiSHA.grimchain import main
+
+if __name__ == "__main__":
+    main()

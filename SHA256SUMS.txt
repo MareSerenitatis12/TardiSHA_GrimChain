@@ -1,0 +1,4 @@
+3315128f89e9e25e9633546b6a0944ef736117f5ccee795547dfb29aecc55619  SOURCE_MANIFEST.json
+33d67215154bef70bc17954ba44f56d847e1444ae52de20193f3dbdf624de944  dist/tardisha-23.0.5-cp312-cp312-linux_x86_64.whl
+d357e27a83a2d7b71f5a45ebab07c7df829bcc1a4612a4b4e24df397c39e39cc  dist/tardisha-23.0.5.tar.gz
+4b3442852bbdbddaade69333322fbf33b239a7c3358b37f6b60e69bf07faca2c  dist/tardisha_23.0.5-1_amd64.deb

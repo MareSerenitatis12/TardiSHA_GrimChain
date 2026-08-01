@@ -1,0 +1,17 @@
+TardiSHA v23 Grimchain Quick Start
+
+Basic use:
+  grimchain path/to/file
+  grimchain path/to/directory
+
+Synodic Magicae center:
+  grimchain 64 path/to/file
+  grimchain 64 path/to/directory
+
+Save and verify:
+  grimchain 1000000 source.bin --output source.grim
+  grimchain source.bin --verify --output source.grim
+
+Help:
+  grimchain --help
+  grimchain --help -a

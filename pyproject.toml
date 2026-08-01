@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TardiSHA"
+version = "23.0.6"
+description = "ALQC structured content seal with Final Equation Z routing and Aeternum Mirror return."
+requires-python = ">=3.10"
+readme = "README.md"
+license = "MPL-2.0"
+license-files = ["LICENSE"]
+authors = [{name = "Magus Jamye Reficul Ahnend"}]
+keywords = ["ALQC", "structured hash", "content seal", "Grimchain", "Aeternum Mirror"]
+
+[project.scripts]
+grimchain = "TardiSHA.grimchain:main"
+tardisha = "TardiSHA.cli:main"
+TardiSHA = "TardiSHA.cli:main"
+
+[tool.setuptools]
+packages = ["TardiSHA"]
+
+[tool.setuptools.data-files]
+"share/doc/tardisha" = ["DICTIONARY.md"]
