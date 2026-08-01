@@ -1,0 +1,26 @@
+just to watch:
+
+x='home'; while :; do x="$(grimchain 20736 --string "$x")"; clear; printf '%s\n' "$x"; sleep 0.01; done
+
+to record via txt document each output:
+
+x='home'; f="$HOME/Documents/mychoiceoffilename.txt"; : > "$f"; while :; do x="$(grimchain 20736 --string "$x")"; clear; printf '%s\n' "$x" | tee -a "$f"; sleep 0.01; done
+
+with timeout:
+
+timeout 10m bash -c 'x="home"; f="$HOME/Documents/mychoiceoffilename.txt"; : > "$f"; while :; do x="$(grimchain 20736 --string "$x")"; clear; printf "%s\n" "$x" | tee -a "$f"; sleep 0.01; done'
+
+---
+
+diff check:
+
+diff -q ~/Documents/first.txt ~/Documents/second.txt
+
+completel line-by-line difference:
+
+diff -u ~/Documents/first.txt ~/Documents/second.txt | less
+
+---
+For a strict exact-match verdict:
+
+cmp -s ~/Documents/first.txt ~/Documents/second.txt && echo "IDENTICAL" || echo "DIFFERENT"

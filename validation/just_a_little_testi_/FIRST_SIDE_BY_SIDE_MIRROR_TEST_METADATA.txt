@@ -1,0 +1,73 @@
+REPORT GENERATED: 2026-08-01T14:36:31-04:00
+
+COMMAND (RESPECTIVE TO FILENAME):
+grimchain 20736 --string "home" && timeout 1m bash -c 'x="home"; f="$HOME/Documents/FIRST_SIDE_BY_SIDE_MIRROR_TEST_SIDE_A.txt"; : > "$f"; while :; do x="$(grimchain 20736 --string "$x")"; clear; printf "%s\n" "$x" | tee -a "$f"; sleep 0.01; done'
+
+============================================================
+FILE: /home/avgui/Documents/FIRST_SIDE_BY_SIDE_MIRROR_TEST_SIDE_A.txt
+============================================================
+  File: /home/avgui/Documents/FIRST_SIDE_BY_SIDE_MIRROR_TEST_SIDE_A.txt
+  Size: 5963189   	Blocks: 11656      IO Block: 4096   regular file
+Device: 252,1	Inode: 41272350    Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/   avgui)   Gid: ( 1000/   avgui)
+Access: 2026-08-01 14:27:01.956196016 -0400
+Modify: 2026-08-01 14:08:55.875925263 -0400
+Change: 2026-08-01 14:08:55.875925263 -0400
+ Birth: 2026-08-01 14:06:46.668735328 -0400
+CHARACTERS: 1806729
+BYTES: 5963189
+LINES: 87
+WORDS: 87
+SHA256: 46d41c8701eccfd48e531ea5d448211fb34d516e7aaca08b6a8258817ccc535b
+
+============================================================
+FILE: /home/avgui/Documents/FIRST_SIDE_BY_SIDE_MIRROR_TEST_SIDE_B.txt
+============================================================
+  File: /home/avgui/Documents/FIRST_SIDE_BY_SIDE_MIRROR_TEST_SIDE_B.txt
+  Size: 5963189   	Blocks: 11656      IO Block: 4096   regular file
+Device: 252,1	Inode: 41272368    Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/   avgui)   Gid: ( 1000/   avgui)
+Access: 2026-08-01 14:27:01.956196016 -0400
+Modify: 2026-08-01 14:08:58.107997733 -0400
+Change: 2026-08-01 14:08:58.107997733 -0400
+ Birth: 2026-08-01 14:06:48.127782581 -0400
+CHARACTERS: 1806729
+BYTES: 5963189
+LINES: 87
+WORDS: 87
+SHA256: 46d41c8701eccfd48e531ea5d448211fb34d516e7aaca08b6a8258817ccc535b
+
+============================================================
+FILE: /home/avgui/Documents/FIRST_SIDE_BY_SIDE_MIRROR_TEST_SIDE_C.txt
+============================================================
+  File: /home/avgui/Documents/FIRST_SIDE_BY_SIDE_MIRROR_TEST_SIDE_C.txt
+  Size: 5963189   	Blocks: 11656      IO Block: 4096   regular file
+Device: 252,1	Inode: 41268080    Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/   avgui)   Gid: ( 1000/   avgui)
+Access: 2026-08-01 14:29:22.519781065 -0400
+Modify: 2026-08-01 14:30:21.844716957 -0400
+Change: 2026-08-01 14:30:21.844716957 -0400
+ Birth: 2026-08-01 14:29:22.519781065 -0400
+CHARACTERS: 1806729
+BYTES: 5963189
+LINES: 87
+WORDS: 87
+SHA256: 46d41c8701eccfd48e531ea5d448211fb34d516e7aaca08b6a8258817ccc535b
+
+============================================================
+FILE: /home/avgui/Documents/FIRST_SIDE_BY_SIDE_MIRROR_TEST_SIDE_D.txt
+============================================================
+  File: /home/avgui/Documents/FIRST_SIDE_BY_SIDE_MIRROR_TEST_SIDE_D.txt
+  Size: 5963189   	Blocks: 11656      IO Block: 4096   regular file
+Device: 252,1	Inode: 41261929    Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/   avgui)   Gid: ( 1000/   avgui)
+Access: 2026-08-01 14:29:21.080734111 -0400
+Modify: 2026-08-01 14:30:20.728680535 -0400
+Change: 2026-08-01 14:30:20.728680535 -0400
+ Birth: 2026-08-01 14:29:21.080734111 -0400
+CHARACTERS: 1806729
+BYTES: 5963189
+LINES: 87
+WORDS: 87
+SHA256: 46d41c8701eccfd48e531ea5d448211fb34d516e7aaca08b6a8258817ccc535b
+
