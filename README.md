@@ -707,7 +707,7 @@ The 110-active, 34-withheld Liquid body remains a governor. It is not flattened 
 
 ## Exact mathematics and the compiled kernel
 
-TardiSHA 23.0.6 carries the decision bodies required by the Canon without tolerance gates:
+TardiSHA 23.0.7 carries the decision bodies required by the Canon without tolerance gates:
 
 - `PHI` and `PHI_SQUARED` are exact elements of ℚ(√5). Their float projections are named `PHI_IMAGE` and `PHI_SQUARED_IMAGE` and are used only where a visible frequency image is required.
 - The nine-strike Ennead ledger is conserved in exact ℚ(√5). The Q₃ transfer and accumulated Form work close by coefficient equality.
@@ -736,19 +736,19 @@ sudo apt install tardisha
 ### Direct Debian package
 
 ```bash
-sudo apt install ./dist/tardisha_23.0.6-1_amd64.deb
+sudo apt install ./dist/tardisha_23.0.7-1_amd64.deb
 ```
 
 ### Wheel
 
 ```bash
-python3 -m pip install dist/tardisha-23.0.6-*.whl
+python3 -m pip install dist/tardisha-23.0.7-*.whl
 ```
 
 ### Source distribution
 
 ```bash
-python3 -m pip install dist/tardisha-23.0.6.tar.gz
+python3 -m pip install dist/tardisha-23.0.7.tar.gz
 ```
 
 ### Auditable source checkout
@@ -986,7 +986,7 @@ Practical API details remain in [`docs/PYTHON_API.md`](docs/PYTHON_API.md). Modu
 
 ## Verification status
 
-The `23.0.6` release artifacts were validated from a clean build:
+The `23.0.7` release artifacts were validated from a clean build:
 
 ```text
 built-in TardiSHA suite:             154/154 pass
@@ -1018,7 +1018,7 @@ python3 validation/compliance_audit_test.py
 python3 validation/final_repair_ledger_test.py
 ```
 
-The independent Golden resolver uses its own high-precision Decimal interval implementation. The hostile Aeternum validator checks exact fixed points, false returns, mutation, foreign values, physical accounting, and repeated terminal return lineage. The manual command record is stored under `validation/results/MANUAL_TERMINAL_VALIDATION_23.0.6.md`.
+The independent Golden resolver uses its own high-precision Decimal interval implementation. The hostile Aeternum validator checks exact fixed points, false returns, mutation, foreign values, physical accounting, and repeated terminal return lineage. The manual command record is stored under `validation/results/MANUAL_TERMINAL_VALIDATION_23.0.7.md`.
 
 ---
 

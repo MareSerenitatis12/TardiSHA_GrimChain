@@ -549,12 +549,12 @@ def run() -> int:
        and LA.DAEMONIC_TONGUE[9:12] == ("☽", "☉", "☾")
        and LA.DAEMONIC_TONGUE[24:36] == ("⏣", "⬡", "✡", "⚝", "❂", "ꙮ", "❈", "⧗", "⊛", "❄", "⚛", "⌬"))
     ck("50 Synodic Magicae and Daemonic Tongue preserve their exact bodies",
-       len(LA.SYNODIC_MAGICAE) == 180
-       and len(set(LA.SYNODIC_MAGICAE)) == 180
+       len(LA.SYNODIC_MAGICAE) == 192
+       and len(set(LA.SYNODIC_MAGICAE)) == 192
        and len(LA.DAEMONIC_TONGUE) == 192
        and len(set(LA.DAEMONIC_TONGUE)) == 192
        and H.ALPHABET == LA.SYNODIC_MAGICAE
-       and LA.SYNODIC_MAGICAE == "".join(LA.DAEMONIC_TONGUE[:180])
+       and LA.SYNODIC_MAGICAE == "".join(LA.DAEMONIC_TONGUE)
        and LA.DAEMONIC_TONGUE[-12:] == ("𝔓", "ཪ", "☍", "⟠", "⚶", "߷", "🜚", "🜛", "🜕", "🜗", "🜔", "🜖"))
     ck("52 verify recomputes dynamic slots",
        C.verify_living_domus(sn(9), gi, gj, emission=source_emission, source_digest=dig, source_size=size,
