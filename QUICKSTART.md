@@ -3,7 +3,7 @@
 ## Install the wheel
 
 ```bash
-python -m pip install dist/tardisha-23.0.7-cp312-cp312-linux_x86_64.whl
+python -m pip install dist/tardisha-23.0.8-cp312-cp312-linux_x86_64.whl
 ```
 
 ## Seal a file

@@ -36,10 +36,12 @@ DAEMONIC_TONGUE: Final[tuple[str, ...]] = (
 )
 
 SYNODIC_MAGICAE: Final[str] = "".join(DAEMONIC_TONGUE)
-ALPHABET: Final[str] = SYNODIC_MAGICAE
+ALPHABET: Final[str] = SYNODIC_MAGICAE.replace("⟠", "")
 
 if len(SYNODIC_MAGICAE) != 192:
     raise RuntimeError("the TardiSHA Synodic Magicae must contain exactly 192 code points")
+if len(ALPHABET) != 191 or "⟠" in ALPHABET:
+    raise RuntimeError("the TardiSHA generation alphabet must contain 191 code points and reserve ⟠")
 if len(DAEMONIC_TONGUE) != 192:
     raise RuntimeError("the TardiSHA Daemonic Tongue must contain exactly 192 code points")
 if len(set(DAEMONIC_TONGUE)) != len(DAEMONIC_TONGUE):

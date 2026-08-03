@@ -548,12 +548,15 @@ def run() -> int:
        and LA.DAEMONIC_TONGUE[1:9] == ("☿", "♂", "♀", "♃", "♄", "⛢", "♆", "♇")
        and LA.DAEMONIC_TONGUE[9:12] == ("☽", "☉", "☾")
        and LA.DAEMONIC_TONGUE[24:36] == ("⏣", "⬡", "✡", "⚝", "❂", "ꙮ", "❈", "⧗", "⊛", "❄", "⚛", "⌬"))
-    ck("50 Synodic Magicae and Daemonic Tongue preserve their exact bodies",
+    ck("50 canonical language preserves 192 glyphs while generation reserves ⟠",
        len(LA.SYNODIC_MAGICAE) == 192
        and len(set(LA.SYNODIC_MAGICAE)) == 192
        and len(LA.DAEMONIC_TONGUE) == 192
        and len(set(LA.DAEMONIC_TONGUE)) == 192
-       and H.ALPHABET == LA.SYNODIC_MAGICAE
+       and len(LA.ALPHABET) == 191
+       and "⟠" in LA.SYNODIC_MAGICAE
+       and "⟠" not in LA.ALPHABET
+       and H.ALPHABET == LA.ALPHABET
        and LA.SYNODIC_MAGICAE == "".join(LA.DAEMONIC_TONGUE)
        and LA.DAEMONIC_TONGUE[-12:] == ("𝔓", "ཪ", "☍", "⟠", "⚶", "߷", "🜚", "🜛", "🜕", "🜗", "🜔", "🜖"))
     ck("52 verify recomputes dynamic slots",

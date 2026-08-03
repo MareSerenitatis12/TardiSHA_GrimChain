@@ -21,7 +21,7 @@ from .qstate_glyphs import derive_domus_q_body
 from .source_emission import SourceEmission, derive_goetics, resolve_court_bearing
 from .manifestation import C_BIO_SQUARED, Manifestation, close_boundary
 from .hashing import iter_middle, CANONICAL_SOURCE_DOMAIN
-from .living_alphabet import SYNODIC_MAGICAE
+from .living_alphabet import ALPHABET
 from .alqc_digest import alqc_hexdigest
 from .trig import TrigMirrorWitness, derive_trig_mirror
 from .tripartite import (
@@ -64,7 +64,7 @@ KLEIN: Final[str] = "\U0001F71A"
 BIAS_TERMINUS: Final[str] = "\U0001D505"
 SUPERVENIENCE: Final[str] = "\u27E0"
 ZERO_MIDDLE_GLYPH: Final[str] = SHADOW_LOCUS_GLYPH
-SYNODIC_CENTER_GLYPHS: Final[frozenset[str]] = frozenset(SYNODIC_MAGICAE)
+SYNODIC_CENTER_GLYPHS: Final[frozenset[str]] = frozenset(ALPHABET)
 UNDERSCORE: Final[str] = "_"
 COLON: Final[str] = ":"
 @dataclass(frozen=True, slots=True)

@@ -66,7 +66,7 @@ GRAMMAR_PERSONALITY_TRAITS: Final[dict[str, str]] = {
     "𝔓": "Parity",
     "ཪ": "Anchor",
     "☍": "Primitive relation",
-    "⟠": "Supervenience",
+    "⟠": "Subspace / Prosody / Axiomyr Gate-Key",
     "⚶": "Focus-to-self",
     "߷": "Court-rooted fold",
     "🜚": "Klein seam",

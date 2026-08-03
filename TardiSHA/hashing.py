@@ -20,10 +20,9 @@ from typing import Any, Iterator, Mapping
 
 from .canon import GLYPH_BODY
 from .alqc_digest import ALQCDigest, alqc_digest, alqc_hexdigest, validate_digest_hex
-from .living_alphabet import SYNODIC_MAGICAE
+from .living_alphabet import ALPHABET
 from .source_emission import PHASE_BYTES, SourceEmission, emission_from_sponge
 
-ALPHABET = SYNODIC_MAGICAE
 SOURCE_CHUNK_BYTES = 8 * 1024 * 1024
 OUTPUT_CHUNK_CHARACTERS = 8192
 
