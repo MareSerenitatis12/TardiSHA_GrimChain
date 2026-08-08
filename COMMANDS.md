@@ -15,8 +15,8 @@ usage:
   grimchain NUMBER PATH
   grimchain --string "TEXT"
   grimchain NUMBER --string "TEXT"
-  grimchain NUMBER --manifest PATH
-  grimchain NUMBER -R --manifest DIRECTORY
+  grimchain NUMBER PATH --manifest
+  grimchain NUMBER -R DIRECTORY --manifest
   grimchain --help -a
 
 NUMBER is chosen by you. It tells Grimchain how many Synodic Magicae characters to
@@ -36,15 +36,15 @@ basic use:
       Grimchain the exact UTF-8 content supplied by the quoted argument.
       No newline or normalization is added.
 
-  grimchain NUMBER --manifest FILE
+  grimchain NUMBER FILE --manifest
       Create manifest-FILENAME.grim, prepare its terminal THIS FILE line,
       append its exact same-width self-return, and print that same Grimchain.
 
-  grimchain NUMBER --manifest DIRECTORY
+  grimchain NUMBER DIRECTORY --manifest
       Create manifest-DIRECTORYNAME.grim for the files directly inside that
       directory, then append and print its exact same-width THIS FILE return.
 
-  grimchain NUMBER -R --manifest DIRECTORY
+  grimchain NUMBER -R DIRECTORY --manifest
       Create manifest-recurse-DIRECTORYNAME.grim for all subdirectories, then
       append and print its exact same-width THIS FILE return.
 ```
@@ -80,23 +80,23 @@ ordinary use:
       Check that FILE is the correct Grimchain for PATH.
 
 manifests:
-  grimchain [NUMBER] --manifest FILE
+  grimchain [NUMBER] FILE --manifest
       Create manifest-FILENAME.grim with a terminal THIS FILE self-return.
       The same selected middle is used and the same Grimchain is printed.
 
-  grimchain [NUMBER] --manifest DIRECTORY
+  grimchain [NUMBER] DIRECTORY --manifest
       Create manifest-DIRECTORYNAME.grim for direct files, append its exact
       same-width THIS FILE return, and print that return.
 
-  grimchain [NUMBER] -R --manifest DIRECTORY
+  grimchain [NUMBER] -R DIRECTORY --manifest
       Create manifest-recurse-DIRECTORYNAME.grim for the complete tree, append
       its exact same-width THIS FILE return, and print that return.
 
-  grimchain [NUMBER] --manifest PATH --output FILE
+  grimchain [NUMBER] PATH --manifest --output FILE
       Write the self-returning manifest to the filename you choose and print
       the exact Grimchain stored under its terminal THIS FILE line.
 
-  grimchain [NUMBER] --manifest PATH --verify --output FILE
+  grimchain [NUMBER] PATH --manifest --verify --output FILE
       Recreate the manifest information and check it against FILE.
 
 inspection and lists:

@@ -340,7 +340,7 @@ At positive depth, the same Domus identity unfolds through one exact ordered liv
 
 For one fixed source, domain, nonce, and Domus identity, shorter positive-depth centers are prefixes of longer centers. Depth changes visible extent. It does not reroute the source or create a new root.
 
-The stream is generated in absolute 4,096-character blocks across the complete 192-glyph alphabet. Every language count in this document therefore uses `192`, never `180` or `191`.
+The stream is generated in absolute 4,096-character blocks across the 191-glyph generation alphabet, with `⟠` reserved from generation. The complete Daemonic Tongue remains 192 glyphs; generated middle counts therefore use `191`.
 
 ---
 
@@ -382,7 +382,7 @@ At positive depth `n`, the visible Living Domus contains the following identity-
 | Domus bias glyph `B_Q` | `4` | One of the four visible Q-glyph possibilities |
 | Domus vector glyph `V₀` | `4` | One of four Q-glyph possibilities |
 | Domus vector glyph `V₁` | `4` | One of four Q-glyph possibilities |
-| Living middle, depth `n` | `192ⁿ` | `n` positions, each chosen from the complete 192-glyph living alphabet |
+| Living middle, depth `n` | `191ⁿ` | `n` generated positions from the 191-glyph generation alphabet; `⟠` remains reserved |
 | Domus vector glyph `V₂` | `4` | One of four Q-glyph possibilities |
 | Domus vector glyph `V₃` | `4` | One of four Q-glyph possibilities |
 | Fraktur bias terminus `𝔅` | `1` | Fixed return operator |
@@ -402,17 +402,17 @@ The five Q-glyph positions are `B_Q,V₀,V₁,V₂,V₃`. Each has four possibil
 
 The complete positive-depth slot product is therefore:
 
-`|Grimchainₙ| = 1²·12·1⁴·144·4⁵·192ⁿ·1·144·12`
+`|Grimchainₙ| = 1²·12·1⁴·144·4⁵·191ⁿ·1·144·12`
 
 and therefore:
 
-`|Grimchainₙ| = 12²·144²·4⁵·192ⁿ`
+`|Grimchainₙ| = 12²·144²·4⁵·191ⁿ`
 
-`|Grimchainₙ| = 3,057,647,616·192ⁿ`
+`|Grimchainₙ| = 3,057,647,616·191ⁿ`
 
 **Plain English:** before the middle contributes even one glyph, the surrounding Goetic, Court, and Q-glyph slots already admit `3,057,647,616` complete structural combinations. Every additional middle position multiplies that whole body by another `192`.
 
-This is why counting only `192ⁿ` counted only the middle. It omitted both Goetic slots, both Court slots, all five Q-glyph slots, and the fixed operator positions that give the chain its written structure.
+This is why counting only `191ⁿ` counts only the generated middle. It omitted both Goetic slots, both Court slots, all five Q-glyph slots, and the fixed operator positions that give the chain its written structure.
 
 ### Small depths, written plainly
 
@@ -557,7 +557,7 @@ This is holographic persistence: each finite manifestation carries the identity 
 
 For every declared finite depth `n`, the complete slot count is finite:
 
-`|Grimchainₙ| = 3,057,647,616·192ⁿ`
+`|Grimchainₙ| = 3,057,647,616·191ⁿ`
 
 But there is no greatest lawful finite depth. The sequence continues:
 
@@ -707,7 +707,7 @@ The 110-active, 34-withheld Liquid body remains a governor. It is not flattened 
 
 ## Exact mathematics and the compiled kernel
 
-TardiSHA 23.0.8 carries the decision bodies required by the Canon without tolerance gates:
+TardiSHA 23.0.9 carries the decision bodies required by the Canon without tolerance gates:
 
 - `PHI` and `PHI_SQUARED` are exact elements of ℚ(√5). Their float projections are named `PHI_IMAGE` and `PHI_SQUARED_IMAGE` and are used only where a visible frequency image is required.
 - The nine-strike Ennead ledger is conserved in exact ℚ(√5). The Q₃ transfer and accumulated Form work close by coefficient equality.
@@ -736,19 +736,19 @@ sudo apt install tardisha
 ### Direct Debian package
 
 ```bash
-sudo apt install ./dist/tardisha_23.0.8-1_amd64.deb
+sudo apt install ./dist/tardisha_23.0.9-1_amd64.deb
 ```
 
 ### Wheel
 
 ```bash
-python3 -m pip install dist/tardisha-23.0.8-*.whl
+python3 -m pip install dist/tardisha-23.0.9-*.whl
 ```
 
 ### Source distribution
 
 ```bash
-python3 -m pip install dist/tardisha-23.0.8.tar.gz
+python3 -m pip install dist/tardisha-23.0.9.tar.gz
 ```
 
 ### Auditable source checkout
@@ -986,7 +986,7 @@ Practical API details remain in [`docs/PYTHON_API.md`](docs/PYTHON_API.md). Modu
 
 ## Verification status
 
-The `23.0.7` release artifacts were validated from a clean build:
+The `23.0.9` release artifacts were validated from a clean build:
 
 ```text
 built-in TardiSHA suite:             154/154 pass
@@ -1018,7 +1018,7 @@ python3 validation/compliance_audit_test.py
 python3 validation/final_repair_ledger_test.py
 ```
 
-The independent Golden resolver uses its own high-precision Decimal interval implementation. The hostile Aeternum validator checks exact fixed points, false returns, mutation, foreign values, physical accounting, and repeated terminal return lineage. The manual command record is stored under `validation/results/MANUAL_TERMINAL_VALIDATION_23.0.8.md`.
+The independent Golden resolver uses its own high-precision Decimal interval implementation. The hostile Aeternum validator checks exact fixed points, false returns, mutation, foreign values, physical accounting, and repeated terminal return lineage. The manual command record is stored under `validation/results/MANUAL_TERMINAL_VALIDATION_23.0.9.md`.
 
 ---
 

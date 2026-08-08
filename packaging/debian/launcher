@@ -22,10 +22,10 @@ fi
 # Give each user the two optional documents once. They are not runtime files.
 # If the user later removes either document, Grimchain does not recreate it.
 if [ ! -e "$DOC_MARKER" ]; then
-    if [ ! -e "$STATE_DIR/COMMANDS.md" ]; then
+    if [ ! -e "$STATE_DIR/COMMANDS.md" ] && [ -f "$DOC_DIR/COMMANDS.md" ]; then
         install -m 600 "$DOC_DIR/COMMANDS.md" "$STATE_DIR/COMMANDS.md"
     fi
-    if [ ! -e "$STATE_DIR/README.md" ]; then
+    if [ ! -e "$STATE_DIR/README.md" ] && [ -f "$DOC_DIR/README.md" ]; then
         install -m 600 "$DOC_DIR/README.md" "$STATE_DIR/README.md"
     fi
     : > "$DOC_MARKER"
@@ -34,10 +34,10 @@ fi
 
 case "$(basename "$0")" in
     grimchain)
-        exec "$VENV/bin/python" -m TardiSHA.grimchain "$@"
+        PYTHONPATH="/usr/lib/tardisha${PYTHONPATH:+:$PYTHONPATH}" exec "$VENV/bin/python" -m TardiSHA.grimchain "$@"
         ;;
     tardisha|TardiSHA)
-        exec "$VENV/bin/python" -m TardiSHA.cli "$@"
+        PYTHONPATH="/usr/lib/tardisha${PYTHONPATH:+:$PYTHONPATH}" exec "$VENV/bin/python" -m TardiSHA.cli "$@"
         ;;
     *)
         printf '%s\n' 'Unknown TardiSHA launcher name.' >&2

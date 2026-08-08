@@ -54,6 +54,7 @@ from .route import (
 )
 from .domus import resolve_domus, living_domus_seal, ZERO_MIDDLE_GLYPH
 from .court_registry import full_name, court_ordinal
+from .regia import iter_regia_window
 
 SOURCE_DOMAINS = {
     "canonical": CANONICAL_SOURCE_DOMAIN,
@@ -233,7 +234,7 @@ class TardiSHANode:
     ) -> Iterator[str]:
         """Derive only the window permitted by the authoritative node mode."""
         start, width = self._manifest_window_request(start_coordinate, span_length)
-        yield from iter_middle_window(
+        yield from iter_regia_window(
             self.seed,
             start,
             width,

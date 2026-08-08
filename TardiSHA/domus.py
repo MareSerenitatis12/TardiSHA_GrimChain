@@ -21,6 +21,7 @@ from .qstate_glyphs import derive_domus_q_body
 from .source_emission import SourceEmission, derive_goetics, resolve_court_bearing
 from .manifestation import C_BIO_SQUARED, Manifestation, close_boundary
 from .hashing import iter_middle, CANONICAL_SOURCE_DOMAIN
+from .regia import regia_middle
 from .living_alphabet import ALPHABET
 from .alqc_digest import alqc_hexdigest
 from .trig import TrigMirrorWitness, derive_trig_mirror
@@ -531,7 +532,7 @@ def _center(
     if n == 0:
         return ZERO_MIDDLE_GLYPH
     seed = domus_center_seed(res, source_domain=source_domain, nonce=nonce)
-    center = "".join(iter_middle(seed, n))
+    center = regia_middle(seed, n)
     if len(center) != n:
         raise RuntimeError("Synodic Magicae Domus body length mismatch")
     return center

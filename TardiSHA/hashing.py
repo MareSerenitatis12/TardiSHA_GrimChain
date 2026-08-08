@@ -484,6 +484,7 @@ def create_middle_from_fingerprint(
         nonce=nonce,
         source_domain=source_domain,
     )
-    return "".join(
-        iter_middle(seed, middle_length, start_coordinate=start_coordinate)
-    )
+    # Public finite middle materialization is the corrected visible GrimChain body.
+    # Raw ``iter_middle`` / ``iter_middle_window`` remain the untouched coordinate law.
+    from .regia import regia_window
+    return regia_window(seed, start_coordinate, middle_length)

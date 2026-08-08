@@ -128,9 +128,9 @@ credentials.*
 *.zip
 *.7z
 *.rar
-!dist/tardisha-23.0.8-*.whl
-!dist/tardisha-23.0.8.tar.gz
-!dist/tardisha_23.0.8-1_amd64.deb
+!dist/tardisha-23.0.7-*.whl
+!dist/tardisha-23.0.7.tar.gz
+!dist/tardisha_23.0.7-1_amd64.deb
 
 # Generated manifests/checksums outside the public root
 **/SHA256SUMS.txt
@@ -144,3 +144,7 @@ RELEASE_CONTENTS.md
 
 # Launchpad source-package workspace and signed upload artifacts
 /launchpad/
+
+!dist/tardisha-23.0.9-*.whl
+!dist/tardisha-23.0.9.tar.gz
+!dist/tardisha_23.0.9-1_amd64.deb

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document is the implementation proof of concept and proof of completed work for the TardiSHA 23.0.8 source tree in this distribution.
+This document is the implementation proof of concept and proof of completed work for the TardiSHA 23.0.9 source tree in this distribution.
 
 It answers one narrow question with reproducible evidence:
 
@@ -19,7 +19,7 @@ Claims about standardized cryptographic security, external peer review, physical
 ## Validation snapshot
 
 - Package: `TardiSHA`
-- Version: `23.0.8`
+- Version: `23.0.9`
 - CLI: `grimchain`
 - Runtime: Python 3.10+
 - External runtime dependencies: none

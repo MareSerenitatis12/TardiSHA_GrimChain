@@ -1,27 +1,27 @@
 {
   "format": 2,
   "proof": "verified depth-zero Grimchain",
-  "files": 74,
+  "files": 76,
   "entries": [
     {
       "path": ".gitignore",
-      "bytes": 1977,
-      "grimchain": "🜛⌬🜚𐔃🜚:🜗_::🜕::🜕:⛎:🜗::🜖::_𝔅:🜚ށ🜚⚝🜛"
+      "bytes": 2069,
+      "grimchain": "🜛✡🜚ᚦ🜚:🜖_::🜕::🜕:⛎:🜗::🜕::_𝔅:🜚⎉🜚✡🜛"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 5959,
-      "grimchain": "🜛⌬🜚𐔆🜚:🜗_::🜕::🜕:⛎:🜗::🜖::_𝔅:🜚ᛉ🜚❈🜛"
+      "bytes": 6765,
+      "grimchain": "🜛⬡🜚ᛏ🜚:🜕_::🜕::🜗:⛎:🜔::🜔::_𝔅:🜚𐠈🜚⌬🜛"
     },
     {
       "path": "CITATION.cff",
       "bytes": 250,
-      "grimchain": "🜛❂🜚ⵄ🜚:🜕_::🜕::🜗:⛎:🜔::🜕::_𝔅:🜚ᚹ🜚⊛🜛"
+      "grimchain": "🜛⏣🜚ނ🜚:🜗_::🜕::🜕:⛎:🜕::🜗::_𝔅:🜚ꠒ🜚✡🜛"
     },
     {
       "path": "COMMANDS.md",
       "bytes": 4321,
-      "grimchain": "🜛ꙮ🜚ꠑ🜚:🜗_::🜕::🜕:⛎:🜕::🜖::_𝔅:🜚≾🜚⚛🜛"
+      "grimchain": "🜛⌬🜚𐔆🜚:🜗_::🜕::🜕:⛎:🜗::🜖::_𝔅:🜚ᛊ🜚❈🜛"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -56,17 +56,17 @@
     {
       "path": "QUICKSTART.md",
       "bytes": 1079,
-      "grimchain": "🜛ꙮ🜚ꠑ🜚:🜗_::🜕::🜕:⛎:🜕::🜖::_𝔅:🜚᭡🜚⚛🜛"
+      "grimchain": "🜛❄🜚𐤧🜚:🜗_::🜕::🜕:⛎:🜖::🜖::_𝔅:🜚ⶁ🜚⧗🜛"
     },
     {
       "path": "README.md",
-      "bytes": 40760,
-      "grimchain": "🜛⧗🜚𒋗🜚:🜕_::🜕::🜗:⛎:🜖::🜔::_𝔅:🜚༺🜚⚛🜛"
+      "bytes": 40836,
+      "grimchain": "🜛ꙮ🜚ꠏ🜚:🜗_::🜕::🜕:⛎:🜕::🜖::_𝔅:🜚ᚷ🜚⊛🜛"
     },
     {
       "path": "RELEASE_CONTENTS.md",
-      "bytes": 2034,
-      "grimchain": "🜛⌬🜚𐔈🜚:🜗_::🜕::🜕:⛎:🜗::🜖::_𝔅:🜚ᚾ🜚⊛🜛"
+      "bytes": 2025,
+      "grimchain": "🜛⏣🜚ތ🜚:🜗_::🜕::🜕:⛎:🜕::🜗::_𝔅:🜚𐠃🜚⌬🜛"
     },
     {
       "path": "SECURITY.md",
@@ -80,8 +80,8 @@
     },
     {
       "path": "TardiSHA/__init__.py",
-      "bytes": 8135,
-      "grimchain": "🜛❂🜚ⵊ🜚:🜕_::🜕::🜗:⛎:🜔::🜕::_𝔅:🜚𐠈🜚⌬🜛"
+      "bytes": 9461,
+      "grimchain": "🜛❂🜚ⴳ🜚:🜕_::🜕::🜗:⛎:🜔::🜕::_𝔅:🜚ꠌ🜚✡🜛"
     },
     {
       "path": "TardiSHA/__main__.py",
@@ -130,13 +130,18 @@
     },
     {
       "path": "TardiSHA/domus.py",
-      "bytes": 26450,
-      "grimchain": "🜛❂🜚ⵀ🜚:🜕_::🜕::🜗:⛎:🜔::🜕::_𝔅:🜚ᛏ🜚❈🜛"
+      "bytes": 26474,
+      "grimchain": "🜛❂🜚ⵉ🜚:🜕_::🜕::🜗:⛎:🜔::🜕::_𝔅:🜚𝀵🜚⚛🜛"
     },
     {
       "path": "TardiSHA/domus_stream.py",
-      "bytes": 10478,
-      "grimchain": "🜛❈🜚🜈🜚:🜗_::🜕::🜖:⛎:🜕::🜗::_𝔅:🜚ⶀ🜚⧗🜛"
+      "bytes": 10533,
+      "grimchain": "🜛⚝🜚⦽🜚:🜔_::🜕::🜖:⛎:🜖::🜔::_𝔅:🜚ᚱ🜚⊛🜛"
+    },
+    {
+      "path": "TardiSHA/enoch.py",
+      "bytes": 4469,
+      "grimchain": "🜛⊛🜚ⶆ🜚:🜖_::🜕::🜖:⛎:🜖::🜕::_𝔅:🜚ᛍ🜚❈🜛"
     },
     {
       "path": "TardiSHA/folding.py",
@@ -151,12 +156,12 @@
     {
       "path": "TardiSHA/grimchain.py",
       "bytes": 23087,
-      "grimchain": "🜛⚛🜚𐠃🜚:🜕_::🜕::🜗:⛎:🜕::🜕::_𝔅:🜚ތ🜚⚝🜛"
+      "grimchain": "🜛ꙮ🜚ꠏ🜚:🜗_::🜕::🜕:⛎:🜕::🜖::_𝔅:🜚ᚷ🜚⊛🜛"
     },
     {
       "path": "TardiSHA/hashing.py",
-      "bytes": 18084,
-      "grimchain": "🜛❈🜚🜆🜚:🜗_::🜕::🜖:⛎:🜕::🜗::_𝔅:🜚🜃🜚ꙮ🜛"
+      "bytes": 18253,
+      "grimchain": "🜛❂🜚ⴰ🜚:🜕_::🜕::🜗:⛎:🜔::🜕::_𝔅:🜚𐔂🜚⏣🜛"
     },
     {
       "path": "TardiSHA/living_alphabet.py",
@@ -180,8 +185,8 @@
     },
     {
       "path": "TardiSHA/node.py",
-      "bytes": 27406,
-      "grimchain": "🜛⚛🜚𐠋🜚:🜕_::🜕::🜗:⛎:🜕::🜕::_𝔅:🜚༻🜚⚛🜛"
+      "bytes": 27442,
+      "grimchain": "🜛⧗🜚𒆠🜚:🜕_::🜕::🜗:⛎:🜖::🜔::_𝔅:🜚ᛇ🜚❈🜛"
     },
     {
       "path": "TardiSHA/personality_traits.py",
@@ -199,14 +204,19 @@
       "grimchain": "🜛⏣🜚އ🜚:🜗_::🜕::🜕:⛎:🜕::🜗::_𝔅:🜚𐔇🜚⏣🜛"
     },
     {
+      "path": "TardiSHA/regia.py",
+      "bytes": 21401,
+      "grimchain": "🜛❄🜚𐤠🜚:🜗_::🜕::🜕:⛎:🜖::🜖::_𝔅:🜚𐔈🜚⏣🜛"
+    },
+    {
       "path": "TardiSHA/route.py",
       "bytes": 21883,
       "grimchain": "🜛⏣🜚މ🜚:🜗_::🜕::🜕:⛎:🜕::🜗::_𝔅:🜚ᚦ🜚⊛🜛"
     },
     {
       "path": "TardiSHA/seal.py",
-      "bytes": 27268,
-      "grimchain": "🜛⊛🜚ⶃ🜚:🜖_::🜕::🜖:⛎:🜖::🜕::_𝔅:🜚ނ🜚⚝🜛"
+      "bytes": 27323,
+      "grimchain": "🜛✡🜚ᚷ🜚:🜖_::🜕::🜕:⛎:🜗::🜕::_𝔅:🜚ᛌ🜚❈🜛"
     },
     {
       "path": "TardiSHA/source_emission.py",
@@ -215,8 +225,8 @@
     },
     {
       "path": "TardiSHA/stream.py",
-      "bytes": 8876,
-      "grimchain": "🜛ꙮ🜚⎉🜚:🜗_::🜕::🜕:⛎:🜕::🜖::_𝔅:🜚𐤩🜚❂🜛"
+      "bytes": 10144,
+      "grimchain": "🜛❈🜚🜆🜚:🜗_::🜕::🜖:⛎:🜕::🜗::_𝔅:🜚🜄🜚ꙮ🜛"
     },
     {
       "path": "TardiSHA/trig.py",
@@ -235,8 +245,8 @@
     },
     {
       "path": "TardiSHA_selftest.py",
-      "bytes": 59874,
-      "grimchain": "🜛⚝🜚𝀖🜚:🜔_::🜕::🜖:⛎:🜖::🜔::_𝔅:🜚𐤦🜚❂🜛"
+      "bytes": 59853,
+      "grimchain": "🜛✡🜚ᚹ🜚:🜖_::🜕::🜕:⛎:🜗::🜕::_𝔅:🜚ⶇ🜚⧗🜛"
     },
     {
       "path": "The Birth of Metal Through Fire and Breath.pdf",
@@ -246,7 +256,7 @@
     {
       "path": "VERSION",
       "bytes": 7,
-      "grimchain": "🜛ꙮ🜚ꠎ🜚:🜗_::🜕::🜕:⛎:🜕::🜖::_𝔅:🜚ⶊ🜚⧗🜛"
+      "grimchain": "🜛⧗🜚𒋗🜚:🜕_::🜕::🜗:⛎:🜖::🜔::_𝔅:🜚𝀟🜚⚛🜛"
     },
     {
       "path": "docs/ALQC_GLOSSARY.md",
@@ -271,7 +281,7 @@
     {
       "path": "docs/PROOF_OF_CLAIMS.md",
       "bytes": 51283,
-      "grimchain": "🜛⌬🜚𐔈🜚:🜗_::🜕::🜕:⛎:🜗::🜖::_𝔅:🜚ᚿ🜚⊛🜛"
+      "grimchain": "🜛ꙮ🜚ꠎ🜚:🜗_::🜕::🜕:⛎:🜕::🜖::_𝔅:🜚ⶆ🜚⧗🜛"
     },
     {
       "path": "docs/PYTHON_API.md",
@@ -320,13 +330,13 @@
     },
     {
       "path": "packaging/debian/launcher",
-      "bytes": 1323,
-      "grimchain": "🜛⏣🜚ކ🜚:🜗_::🜕::🜕:⛎:🜕::🜗::_𝔅:🜚ᛋ🜚❈🜛"
+      "bytes": 1503,
+      "grimchain": "🜛❄🜚𐤨🜚:🜗_::🜕::🜕:⛎:🜖::🜖::_𝔅:🜚ᚷ🜚⊛🜛"
     },
     {
       "path": "pyproject.toml",
       "bytes": 702,
-      "grimchain": "🜛❄🜚𐤢🜚:🜗_::🜕::🜕:⛎:🜖::🜖::_𝔅:🜚ꠒ🜚✡🜛"
+      "grimchain": "🜛⌬🜚𐔋🜚:🜗_::🜕::🜕:⛎:🜗::🜖::_𝔅:🜚𐠞🜚⌬🜛"
     },
     {
       "path": "setup.py",

@@ -26,6 +26,7 @@ from .route import SourceRouteWitness, resolve_parents
 from .source_emission import SourceEmission
 from .mirror_math import mirror_file_emission
 from .stream import count_codepoints
+from .regia import iter_regia_middle, regia_middle
 from .domus import (
     resolve_domus,
     domus_center_seed,
@@ -184,7 +185,7 @@ def write_living_domus_seal(
                 handle.write(ZERO_MIDDLE_GLYPH)
             else:
                 seed = domus_center_seed(res, source_domain=domain, nonce=salt)
-                for chunk in iter_middle(seed, width):
+                for chunk in iter_regia_middle(seed, width):
                     handle.write(chunk)
             handle.write(tail)
             handle.flush()
@@ -281,12 +282,12 @@ def verify_living_domus_seal(
                     pass  # depth 0: Shadow Locus center fully determined by head/tail
                 else:
                     seed = domus_center_seed(res, source_domain=domain, nonce=salt)
-                    expected = "".join(iter_middle(seed, 1))
+                    expected = regia_middle(seed, 1)
                     if first != expected:
                         return False
             else:
                 seed = domus_center_seed(res, source_domain=domain, nonce=salt)
-                for chunk in iter_middle(seed, center_len):
+                for chunk in iter_regia_middle(seed, center_len):
                     expected_chunk = chunk
                     if h.read(len(expected_chunk)) != expected_chunk:
                         return False

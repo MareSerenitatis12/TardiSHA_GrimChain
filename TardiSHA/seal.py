@@ -31,6 +31,7 @@ from .mirror_math import mirror_file_emission
 from .source_emission import SourceEmission
 from .alqc_digest import validate_digest_hex
 from .stream import StreamReport, count_codepoints, write_accordion_stream
+from .regia import iter_regia_middle, regia_middle
 
 
 _SOURCE_DOMAIN_BYTES = {
@@ -518,7 +519,7 @@ def _compare_streamed_seal(
                     nonce=nonce,
                     source_domain=source_domain,
                 )
-                matched = matched and middle == "".join(iter_middle(seed, 1))
+                matched = matched and middle == regia_middle(seed, 1)
         else:
             width = validate_middle_length(center_codepoints)
             seed = coordinate_seed(
@@ -530,7 +531,7 @@ def _compare_streamed_seal(
                 nonce=nonce,
                 source_domain=source_domain,
             )
-            for expected in iter_middle(seed, width):
+            for expected in iter_regia_middle(seed, width):
                 if handle.read(len(expected)) != expected:
                     matched = False
                     break
@@ -617,7 +618,7 @@ def _write_stream_to_paths(
                 output_handle,
                 origin_glyph=origin,
                 resolution_glyph=resolution,
-                middle_chunks=iter_middle(seed, middle_length),
+                middle_chunks=iter_regia_middle(seed, middle_length),
                 middle_length=middle_length,
                 seed=seed,
                 packet_manifest=manifest_handle,

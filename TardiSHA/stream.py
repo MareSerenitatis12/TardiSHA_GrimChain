@@ -11,6 +11,7 @@ from .hashing import ALPHABET, TardiSHAError, validate_glyph, validate_middle_le
 from .manifestation import ennead_saturate, manifestation_fold, vector_row
 from .alqc_digest import alqc_hexdigest
 from .tripartite import SHADOW_LOCUS_GLYPH
+from .regia import iter_regia_middle
 
 PACKET_WIDTH = TOTAL_CAPACITY
 PACKET_DOMAIN = b"TARDISHA:LOCAL-COURT-PACKET\x00"
@@ -173,18 +174,45 @@ def write_accordion_stream(
             packet_manifest.write(json.dumps({"type": "packet", **asdict(audit)}, separators=(",", ":")) + "\n")
         packet_index += 1
 
-    for chunk in middle_chunks:
-        if not isinstance(chunk, str) or any(character not in ALPHABET for character in chunk):
-            raise TardiSHAError("middle stream emitted a non-Synodic Magicae chunk")
-        if not chunk:
-            raise TardiSHAError("middle stream emitted an empty chunk")
+    # ``write_accordion_stream`` is itself a visible GrimChain surface.  It does not
+    # trust a caller to have applied Regia correctly: the supplied stream is checked
+    # glyph-for-glyph against the one canonical pre-inscription derivation, and only
+    # that canonical body is committed. Chunk boundaries are irrelevant.
+    supplied = iter(middle_chunks)
+    supplied_buffer = ""
+
+    def match_supplied(expected: str) -> None:
+        nonlocal supplied_buffer
+        while len(supplied_buffer) < len(expected):
+            try:
+                candidate = next(supplied)
+            except StopIteration as exc:
+                raise TardiSHAError("middle stream ended before canonical Regia body") from exc
+            if not isinstance(candidate, str) or not candidate:
+                raise TardiSHAError("middle stream emitted an invalid chunk")
+            if any(character not in ALPHABET for character in candidate):
+                raise TardiSHAError("middle stream emitted a non-Synodic Magicae chunk")
+            supplied_buffer += candidate
+        if supplied_buffer[:len(expected)] != expected:
+            raise TardiSHAError("middle stream contradicts canonical Regia manifestation")
+        supplied_buffer = supplied_buffer[len(expected):]
+
+    for chunk in iter_regia_middle(seed, width):
+        match_supplied(chunk)
         produced += len(chunk)
-        if produced > width:
-            raise TardiSHAError("middle stream exceeded requested length")
         pending += chunk
         while len(pending) >= PACKET_WIDTH:
             commit_packet(pending[:PACKET_WIDTH])
             pending = pending[PACKET_WIDTH:]
+
+    if supplied_buffer:
+        raise TardiSHAError("middle stream exceeded canonical Regia manifestation")
+    try:
+        extra = next(supplied)
+    except StopIteration:
+        extra = None
+    if extra is not None:
+        raise TardiSHAError("middle stream exceeded requested length")
 
     if produced != width:
         raise TardiSHAError(f"middle stream produced {produced} characters; expected {width}")
