@@ -1,0 +1,181 @@
+# Python bytecode and caches
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+**/.pytest_cache/
+.mypy_cache/
+**/.mypy_cache/
+.ruff_cache/
+**/.ruff_cache/
+.pyre/
+.pytype/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+
+# Packaging and build residue
+build/
+**/build/
+*.egg-info/
+**/*.egg-info/
+.eggs/
+**/.eggs/
+*.egg
+pip-wheel-metadata/
+wheelhouse/
+site/
+*.spec
+
+# Virtual environments and local Python state
+.venv/
+venv/
+env/
+ENV/
+.python-version
+.python_history
+.ipython/
+.jupyter/
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+*.ipynb
+
+# Editors and operating-system debris
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs, process files, temporary output
+*.log
+*.pid
+*.lock
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+*.stdout
+*.stderr
+*.done
+*.trace
+*.prof
+nohup.out
+
+# Test and validation run output
+validation/results/*
+!validation/results/.gitkeep
+test-results/
+coverage-results/
+reports/
+artifacts/
+examples/
+validation/
+
+# Local workspaces, plans, state, memory, and research
+Testing/
+testing/
+Tests/private/
+workspace/
+workspaces/
+working/
+scratch/
+tmp/
+temp/
+private/
+internal/
+research/
+notes/
+drafts/
+plans/
+state/
+states/
+StateFiles/
+ChatGPT_Plans_and_Scripts/
+gestation_prototypes/
+Math_System/
+Corpus/
+corpus/
+memories/
+memory/
+exports/
+backups/
+archive_work/
+TardiSHA_GrimChain/TardiSHA_IPYNB/
+# Common project-local secret/config files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.*
+credentials.*
+
+# Generated archives and installers are ignored by default.
+# Only the intentional Python-build release artifacts below remain public.
+*.whl
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# Python-only public release artifacts.
+!/installers/python_build/linux_ubuntu/dist/
+!/installers/python_build/linux_ubuntu/dist/*.whl
+!/installers/python_build/linux_ubuntu/dist/*.tar.gz
+!/installers/python_build/linux_ubuntu/dist/*.deb
+!/installers/python_build/mac/[0-9]*/
+!/installers/python_build/mac/[0-9]*/*.pkg
+!/installers/python_build/windows/[0-9]*/
+!/installers/python_build/windows/[0-9]*/*.exe
+
+# Generated release artifacts outside the public root
+**/GRIMCHAINS.txt
+**/SOURCE_MANIFEST.json
+!GRIMCHAINS.txt
+SOURCE_MANIFEST.json
+CHANGELOG.md
+PUBLICATION_CHECKLIST.md
+RELEASE_CONTENTS.md
+
+# Python installer build recipes, validation, and generated packaging bodies are private.
+/installers/python_build/linux_ubuntu/packaging/
+/installers/python_build/linux_ubuntu/build/
+/installers/python_build/linux_ubuntu/launchpad/
+/installers/python_build/mac/build/
+/installers/python_build/windows/build/
+/installers/python_build/testing/
+
+# Other non-public installer development trees.
+/installers/pure_c+/
+/installers/hybrid_python_c+/
+
+# Local generated GrimChain release witnesses are not public installer payloads.
+/installers/**/*.grim
+
+# Root-level Launchpad workspace, if one is ever created.
+/launchpad/
+
+# Signing and cryptographic private material must never enter the repository
+**/OSSLSIGNCODE/
+**/codesign.key
+**/codesign.crt
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+*.sig
