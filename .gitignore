@@ -111,7 +111,7 @@ memory/
 exports/
 backups/
 archive_work/
-TardiSHA_GrimChain/TardiSHA_IPYNB/
+
 # Common project-local secret/config files
 .env
 .env.*

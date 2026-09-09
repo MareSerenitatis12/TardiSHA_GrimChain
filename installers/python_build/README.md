@@ -43,3 +43,13 @@ The documentation sanctuary is user-owned and intentionally deletable without af
 Top-level release documents remain top-level in the sanctuary. The original `docs/` corpus remains a distinct `docs/` directory beneath it; the two bodies are not flattened into one another.
 
 No installer build writes Python bytecode into the preserved source tree. Local build logs, checksum witnesses, validation records, and diff reports are kept under `.build_records/` rather than mixed with release artifacts.
+## Standalone font installers
+
+The preserved 19-font corpus is also available independently of TardiSHA:
+
+- `linux_ubuntu/install_fonts_standalone/`
+- `windows/install_fonts_standalone/`
+- `mac/install_fonts_standalone/`
+
+These installers do not install or remove TardiSHA.
+

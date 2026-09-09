@@ -110,6 +110,23 @@ LIQUID_THRESHOLD: Final[LiquidConnectionGovernor] = LiquidConnectionGovernor(
     withheld=TOTAL_CAPACITY - SATURATION_LIMIT,
 )
 
+# Cantillation ࿂ is the current canonical identity of the existing Liquid
+# connection governor. It is not a thirteenth Goetic operator, does not enlarge
+# GLYPH_BODY, and does not introduce a second threshold or runtime mechanism.
+#
+#     ࿂ = 110/144_Liquid ≡_type ⟨110_active | 144_total | 34_rest⟩
+#
+# No new glyph emerges from the standard twelve-glyph Goetic ALQC body here;
+# ࿂ names the already-existing governor carried by LIQUID_THRESHOLD.
+CANTILLATION_GLYPH: Final[str] = "࿂"
+CANTILLATION_NAME: Final[str] = "Cantillation"
+CANTILLATION: Final[LiquidConnectionGovernor] = LIQUID_THRESHOLD
+
+if CANTILLATION is not LIQUID_THRESHOLD:
+    raise RuntimeError("Cantillation ࿂ must remain the existing 110/144 Liquid governor")
+if (CANTILLATION.active, CANTILLATION.total, CANTILLATION.withheld) != (110, 144, 34):
+    raise RuntimeError("Cantillation ࿂ must remain ⟨110_active|144_total|34_rest⟩")
+
 if len(GLYPH_BODY) != 12 or len(set(GLYPH_BODY)) != 12:
     raise RuntimeError("The Goetic body must contain exactly twelve unique glyph operators")
 
@@ -161,12 +178,12 @@ def court_load(origin_glyph: str, resolution_glyph: str) -> int:
     return court_node(origin_glyph, resolution_glyph)
 
 
-# --- Canonical 110/144 flow governor (Canon L715-742) ---
+# --- Cantillation ࿂: 110/144 flow governor (Canon L715-742) ---
 # "For every node in the 144x144 Latin Square, the maximum number of active
 # connections is capped at 110" (L720). Canon fixes WHICH connections are active
 # by the Deterministic Path Equation (L730-738), a modulo-arithmetic law over the
 # two Court-node indices i, j in [0, 143]:
-#
+#     ࿂ = 110/144_Liquid ≡_type ⟨110_active | 144_total | 34_rest⟩
 #     L_sat(i, j) = 1 (FLOW)  if (i + j) mod 144 <  110
 #                   0 (BLOCK) if (i + j) mod 144 >= 110
 #

@@ -4,9 +4,13 @@ Plinko on your Grandmother's 10" tube tv she had when Orson Wells did War of the
 and you don't ank questions, capiche!
 """
 from __future__ import annotations
+PROSODY_GLYPH = "⟠"
+PROSODY_NAME = "Prosody"
 
+CANTILLATION_GLYPH = "࿂"
+CANTILLATION_NAME = "Cantillation"
 
-व्याकरण = (
+व्याकरण_Prosody = (
     "Breath / Absent",
     "Ponder",
     "Will",
@@ -212,6 +216,6 @@ from __future__ import annotations
     'The Self-Completion',
 )
 
-
-def grimchain_permeation(grimchain: str) -> str:
+def छन्दस्_Cantillation(grimchain: str) -> str:
     return grimchain
+grimchain_permeation = छन्दस्_Cantillation
