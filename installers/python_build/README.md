@@ -27,13 +27,13 @@ Remove it:
 sudo apt remove tardisha
 ```
 
-The Ubuntu package owns one physical TardiSHA font corpus at `/usr/share/local/fonts/tardisha/` and refreshes the fontconfig cache after installation. `/usr/local/share/fonts/tardisha` is only a compatibility symlink to that one corpus so the preserved runtime requires no source change.
+The Ubuntu package installs the TardiSHA font corpus directly at `/usr/local/share/fonts/tardisha/` and refreshes the fontconfig cache after installation. No compatibility symlink is created.
 
 On removal the package removes the TardiSHA font directory and compatibility symlink, then refreshes the fontconfig cache before finishing.
 
 ## Preservation contract
 
-The installer line preserves the exact TardiSHA runtime and the exact 19-font runtime corpus. Windows retains its Windows Fonts behavior. macOS retains its `/Library/Fonts/` behavior.
+The installer line preserves the exact TardiSHA runtime and the exact 38-font runtime corpus. Windows retains its Windows Fonts behavior. macOS retains its `/Library/Fonts/` behavior.
 
 The documentation sanctuary is user-owned and intentionally deletable without affecting the GrimChain runtime:
 
@@ -45,7 +45,7 @@ Top-level release documents remain top-level in the sanctuary. The original `doc
 No installer build writes Python bytecode into the preserved source tree. Local build logs, checksum witnesses, validation records, and diff reports are kept under `.build_records/` rather than mixed with release artifacts.
 ## Standalone font installers
 
-The preserved 19-font corpus is also available independently of TardiSHA:
+The preserved 38-font corpus is also available independently of TardiSHA:
 
 - `linux_ubuntu/install_fonts_standalone/`
 - `windows/install_fonts_standalone/`

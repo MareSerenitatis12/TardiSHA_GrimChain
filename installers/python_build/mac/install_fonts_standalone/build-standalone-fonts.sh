@@ -9,7 +9,7 @@ trap 'rm -rf "$WORK"' EXIT
 PKGROOT="$WORK/root"
 META="$WORK/meta"
 mkdir -p "$PKGROOT/Library/Fonts" "$META"
-for font in "$ROOT"/fonts/runtime/*.ttf; do
+for font in "$ROOT"/fonts/runtime/*; do
   install -m 644 "$font" "$PKGROOT/Library/Fonts/GrimChain-$(basename "$font")"
 done
 (cd "$PKGROOT" && find . -print | LC_ALL=C sort | cpio -o -H odc 2>/dev/null | gzip -9 > "$META/Payload")
