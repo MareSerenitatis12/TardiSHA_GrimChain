@@ -21,7 +21,6 @@ usage:
   grimchain [NUMBER] --string --manifest "TEXT"
   grimchain [NUMBER] --pdf-embed PDF
   grimchain [NUMBER] --pdf-embed --manifest PDF
-  grimchain --pdf-rm-embed PDF
   grimchain --help -a
 
 NUMBER is chosen by you. It tells Grimchain how many Synodic Magicae characters to
@@ -69,7 +68,6 @@ basic use:
       that PDF through the PDF Mirror path, create its self-returning .grim manifest,
       and print the manifest THIS FILE Grimchain.
 
-  grimchain --pdf-rm-embed PDF
       Remove the existing verified terminal PDF GrimChain self-return from PDF.
       This is separate from --pdf-embed and accepts no NUMBER. It first verifies
       the existing terminal return, then restores the exact witnessed PDF body
@@ -153,7 +151,6 @@ PDF self-return:
       Perform the same PDF embed and write the resulting self-returning manifest
       to FILE.
 
-  grimchain --pdf-rm-embed PDF
       Verify and remove only the terminal PDF GrimChain self-return, restoring
       the exact witnessed body. This command is independent of --pdf-embed and
       does not accept a middle NUMBER.

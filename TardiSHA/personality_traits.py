@@ -10,7 +10,7 @@ PROSODY_NAME = "Prosody"
 CANTILLATION_GLYPH = "࿂"
 CANTILLATION_NAME = "Cantillation"
 
-व्याकरण_Prosody = (
+छन्दस्_Prosody = (
     "Breath / Absent",
     "Ponder",
     "Will",
@@ -216,6 +216,6 @@ CANTILLATION_NAME = "Cantillation"
     'The Self-Completion',
 )
 
-def छन्दस्_Cantillation(grimchain: str) -> str:
+def शिक्षा_Cantillation(grimchain: str) -> str:
     return grimchain
-grimchain_permeation = छन्दस्_Cantillation
+grimchain_permeation = शिक्षा_Cantillation

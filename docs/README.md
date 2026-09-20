@@ -14,7 +14,9 @@ TardiSHA is an ALQC-native source engine, Final Equation 𝔃 route, Court and D
 
 It accepts files, directory trees, standard input, and canonical in-memory values. It produces a source-bound public GrimChain consisting of the manifested middle only: `⛎⛎⛎` at depth zero, `☽᳀☾` at depth one, or exactly `n` generated Synodic Magicae coordinates at every depth `n > 1`, with no inserted inner Axiomyr. The source-resolved Goetics, Courts, complete Domus, Q-body, TRIG, Tripartite, phase, and verification witnesses remain inside the derivation that gives the public GrimChain its identity.
 
-The GrimChain at any user-chosen middle depth can be appended as its own raw UTF-8 line to the file that produced it. Nothing in ordinary GrimChaining searches for, strips, or interprets an earlier chain: the resulting physical bytes become the next source body, and the next witness is calculated from that whole body exactly as it stands.
+For low-level files, the GrimChain at any user-chosen middle depth can be appended directly as its own raw UTF-8 bytes to the file that produced it. The Aeternum Mirror recognizes that exact terminal return and returns the same lawful GrimChain. This was manually exercised byte-for-byte on `.txt`, `.md`, `.json`, `.jsonl`, `.csv`, `.tsv`, `.ini`, `.yaml`, `.grim`, and arbitrary `.bin` data, including binary bodies containing NUL and non-text bytes. A second physical copy of the same terminal GrimChain was also appended in each case; the recursive Mirror return still resolved to the same chain. These are low-level byte-body files: their return requires no format-specific office.
+
+PDF is treated as a high-level file for embedding because a PDF has its own document structure. Ordinary PDF GrimChaining still enters the same source/Mirror mathematics, while `--pdf-embed`, `--pdf-dive`, and `--pdf-abort` provide the high-level invisible return operations.
 
 ```bash
 grimchain source.txt
@@ -540,7 +542,7 @@ grimchain 64 path/to/file
 grimchain --middle 64 path/to/file
 ```
 
-Leaving the number out selects the compressed Shadow Locus `⛎` center. A supplied non-negative whole number declares the middle depth; `64` is one example.
+Leaving the number out selects the randomized Living Mirror Chain: Prosody `⟠`, Cantillation `࿂`, Regia `☽☉☾`, and Breath `𑁦`; Regia remains one member. A supplied non-negative whole number declares the middle depth; `64` is one example.
 
 ### Read standard input
 
@@ -562,7 +564,7 @@ grimchain --string "hello world"
 grimchain 64 --string "hello world"
 ```
 
-`--string` receives the exact UTF-8 content of one shell argument. The shell removes the surrounding quotes before Grimchain receives it. Omitting the number uses the compact Shadow Locus `⛎` center; supplying a positive number follows the invariant Axiomyr center law: even depth preserves that many generated coordinates around `᳀`, while odd depth reserves the center for `᳀` and generates one fewer surrounding coordinate. The same middle, nonce, output, and verification laws govern every source form.
+`--string` receives the exact UTF-8 content of one shell argument. The shell removes the surrounding quotes before Grimchain receives it. Omitting the number uses the randomized Living Mirror Chain; supplying a positive number follows the invariant Axiomyr center law: even depth preserves that many generated coordinates around `᳀`, while odd depth reserves the center for `᳀` and generates one fewer surrounding coordinate. The same middle, nonce, output, and verification laws govern every source form.
 
 Shell quoting belongs to the shell. Single quotes preserve characters such as `$HOME` literally; double quotes allow shell expansion before Grimchain receives the resulting string.
 
@@ -577,7 +579,7 @@ grimchain 64 --manifest directory --output chosen-name.grim
 
 The command first writes the complete manifest body and the waiting `THIS FILE` line. It then Grimchains that prepared `.grim` using the exact middle selected by the user, appends only that Grimchain and one terminal newline, Grimchains the completed `.grim` again at the same middle, and prints the final result. The stored `THIS FILE` value and the terminal output are byte-identical.
 
-Omitting `NUMBER` uses the compact Shadow Locus `⛎` center throughout. Supplying positive `NUMBER` carries the same invariant Axiomyr center law through every manifest entry, the manifest-body Grimchain, the first `THIS FILE` pass, and the final confirming pass.
+Omitting `NUMBER` uses the randomized Living Mirror Chain: Prosody `⟠`, Cantillation `࿂`, Regia `☽☉☾`, and Breath `𑁦`; Regia remains one member. Supplying positive `NUMBER` carries the same invariant Axiomyr center law through every manifest entry, the manifest-body Grimchain, the first `THIS FILE` pass, and the final confirming pass.
 
 The physical ending is:
 
@@ -620,14 +622,21 @@ grimchain source.bin --nonce 42
 
 The nonce selects another repeatable source-bound manifestation from the same source law.
 
-### Append and remove a PDF return
+### High-level PDF return
+
+PDF is a high-level file for return embedding. The embedded return is invisible; it is not rendered onto a page. The return uses the existing Aeternum Mirror rather than a second PDF-specific GrimChain mathematics.
 
 ```bash
 grimchain 64 --pdf-embed document.pdf
-grimchain --pdf-rm-embed document.pdf
+grimchain --pdf-dive document.pdf
+grimchain --pdf-abort document.pdf
 ```
 
-The PDF return writes the complete GrimChain as Unicode text through the PDF text-layout engine. The installed operating-system font body supplies the written glyphs. The return remains incremental, source-bound, nonce-bound, and retracts to the exact original PDF bytes after verification.
+`--pdf-embed` obtains the PDF GrimChain at the chosen middle, embeds that exact return invisibly in the PDF, then re-Grimchains it through Mirror.
+
+`--pdf-dive` takes no user middle. It finds the embedded GrimChain that is actually present, derives its extent from that chain, and tests the return through the existing Mirror. A matching return prints the correct GrimChain followed by `MONOZYGOTIC this is the Truth.` A different embedded chain prints the correct GrimChain, `HETEROZYGOTIC it's not the true chain to that pdf. the chain or the pdf was tampered with.`, and the embedded chain for inspection. With no embedded return it prints `ZYGOTIC there is no chain embeded in the pdf`. It does not remove the return.
+
+`--pdf-abort` takes no user middle and removes the embedded PDF GrimChain whether it is valid or invalid. If no return is embedded, there is nothing to remove.
 
 ### Exact file bytes
 

@@ -20,7 +20,6 @@ usage:
   grimchain --help -a
   grimchain --pdf-embed PATH
   grimchain NUMBER --pdf-embed PATH
-  grimchain --pdf-rm-embed PATH
 
 NUMBER is chosen by you. It tells Grimchain how many Synodic Magicae characters to
 place in the middle of the Grimchain. 64 is only an example. Leave NUMBER out
@@ -58,7 +57,6 @@ basic use:
       The PDF keeps its exact filename identity. The terminal return is verified
       through the Aeternum Mirror and must close at D-COMP=0 and Truth=1.
 
-  grimchain --pdf-rm-embed PATH
       Remove the existing verified terminal PDF GrimChain self-return from PATH.
       This is a separate command from --pdf-embed and accepts no NUMBER. It first
       verifies the existing terminal return, then restores the exact witnessed
@@ -121,7 +119,6 @@ PDF self-return:
       witnessed PDF body under its unchanged filename identity and is verified
       by complete Aeternum Mirror regeneration.
 
-  grimchain --pdf-rm-embed PDF
       Verify and remove only the terminal PDF GrimChain self-return, restoring
       the exact witnessed body. This command is independent of --pdf-embed and
       does not accept a middle NUMBER.
